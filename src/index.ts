@@ -1,9 +1,10 @@
 import express from "express";
+import productsRouter from "./routes/products";
 
 const app = express();
 const port = 3500
 
-app.get("/", (req, res) => res.send("Hellow word I'm learning Typescript, t's a type checking language and I love"));
+app.use("/api/v1", productsRouter)
 
 
 app.listen(port, () =>{
